@@ -1,10 +1,11 @@
 import React from 'react'
 import "../../app.css";
+import Navbar from "../components/nav"
 
 function Aboutus() {
   return (
     <>
-    
+    <Navbar />
     <section className="about">
     <div className="firstabout">
       <p>At KodiJobs, we’re dedicated to transforming the recruitment landscape by connecting skilled professionals with opportunities that align with their talents and career ambitions. Our mission is simple: to empower individuals and organizations alike by providing a seamless, transparent, and personalized hiring experience.</p>

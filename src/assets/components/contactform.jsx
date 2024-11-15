@@ -1,4 +1,5 @@
 import React from "react";
+import Navbar from "../components/nav.jsx"
 
 function contactform() {
     const [result, setResult] = React.useState("");
@@ -28,6 +29,7 @@ function contactform() {
     };
   return (
     <>
+     <Navbar/>
       <h2 className="formh2">Contact Us</h2>
       <div className="contactform">
       <form onSubmit={onSubmit}>
@@ -42,7 +44,7 @@ function contactform() {
           <div>
             <input type="text" className="textarea" />
           </div>
-          <button type="submit" className="formbtn">Submit</button>
+          <button type="submit" className="formbtn" onClick={() => notify("Form submitted Successfully")}>Submit</button>
         </form>
       </div>
     </>

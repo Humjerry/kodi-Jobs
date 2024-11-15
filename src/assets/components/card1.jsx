@@ -5,6 +5,7 @@ import SearchImg from "../../images/Search_Magnifying_Glass.svg";
 import { FaLocationDot } from "react-icons/fa6";
 import { FaStar } from "react-icons/fa";
 import { FaRegStar } from "react-icons/fa";
+import Navbar from "../components/nav"
 
 function Card1() {
   const [search, setSearch] = useState(""); // State for search input
@@ -17,6 +18,7 @@ function Card1() {
 
   return (
     <>
+    <Navbar />
       <section>
         <div>
           <h1 className="h1">Our Job Features</h1>

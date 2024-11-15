@@ -15,7 +15,6 @@ import Footerdiv from "./assets/components/footer.jsx";
 import "./app.css";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
-
 import jobData from "../job.json";
 
 export function App() {
@@ -24,8 +23,7 @@ export function App() {
       {/* <SearchContext.Provider value={{ search, setSearch }}> */}
 
       <Router>
-        <Navbar />
-
+  
         <Routes>
           <Route path="/" element={<Signup />} errorElement={<Signup />} />
           <Route

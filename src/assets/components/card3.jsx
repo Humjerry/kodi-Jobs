@@ -3,10 +3,12 @@ import Rect1 from "../../images/Rectangle 139.png";
 import Rect2 from "../../images/Rectangle 140.png";
 import Rect3 from "../../images/Rectangle 141.png";
 import Arow from "../../images/Arrow 1.png";
+import Navbar from "../components/nav.jsx"
 
 function Card3() {
   return (
     <>
+     <Navbar />
       <h1 className="card2h2">See Our Blogs Here</h1>
       <section className="thirdcarddiv">
         <div className="blogcard1">

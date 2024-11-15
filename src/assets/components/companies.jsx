@@ -9,6 +9,7 @@ import Lendsqr from "../../images/lendsqr 1.png";
 function companies() {
   return (
     <>
+    
     <section className="companilogos">
      <figure> <img src={Interswitch} className="Interswitch" alt="" /></figure>
      <figure><img src={Iroko} className="Iroko" alt="" /></figure>

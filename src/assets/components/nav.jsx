@@ -2,6 +2,7 @@ import React from "react";
 import Arrowa from "../../images/Group.png";
 import telegram from "../../images/Group.svg";
 import { Link } from "react-router-dom";
+import { FaUserAlt } from "react-icons/fa";
 function nav() {
   return (
     <div className="nav">
@@ -21,7 +22,7 @@ function nav() {
         
       </ul>
       <div className="postbtn">
-        <h4>Browse Jobs</h4>
+        <FaUserAlt /><h4>Welcome</h4>
         <button>
           Post a job{" "}
           <svg

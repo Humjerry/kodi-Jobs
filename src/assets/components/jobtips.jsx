@@ -5,7 +5,7 @@ var Carousel = require('react-responsive-carousel').Carousel;
 
 var DemoCarousel = React.createClass({
     render() {
-function jobtips() {
+
   return (
 
     <Carousel showArrows={true} onChange={onChange} onClickItem={onClickItem} onClickThumb={onClickThumb}>
@@ -33,10 +33,10 @@ function jobtips() {
                 <div>
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIQOGROOA9_3Po6oQL3qn6qg__ORTb63zBjQ&s" />
                     <p className="legend">Highlight teamwork, adaptability, and communication, as these skills are just as important in tech roles.</p>
-    
+                    </div>
       </Carousel>
       
   )
 }
-
-export default jobtips
+});
+ReactDOM.render(<DemoCarousel />, document.querySelector('.demo-carousel')); 

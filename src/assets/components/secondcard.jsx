@@ -5,13 +5,15 @@ import Markimg from "../../images/7898409_promotion_business_finance_office_mark
 import Entimg from "../../images/3-Online Document.png";
 import Softwimg from "../../images/5355692_code_coding_development_programming_web_icon 1.png";
 import Graphicimg from "../../images/Layer 2.png";
+import Navbar from "../components/nav.jsx";
 
 
 function secondcard() {
 
+  
   return (
-    
     <>
+     <Navbar/>
       <section className="card2">
           <h1 className="card2h1">Our Categories</h1>
         </section>

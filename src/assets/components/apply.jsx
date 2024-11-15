@@ -1,12 +1,14 @@
 import React from "react";
 import { useParams, Link } from "react-router-dom";
 import Navbar from "./nav.jsx";
-import Footerdiv from "./footer.jsx";
 import "../../app.css";
+import { ToastContainer, toast } from "react-toastify";
 import { useState, useEffect } from "react";
 import Spinner from "./Spinner.jsx";
+import { notify } from '../components/hooks/Toastconfig.js';
 import { FaCloudArrowUp } from "react-icons/fa6";
 import { FaChevronCircleLeft } from "react-icons/fa";
+
 
 function JobDetail({ jobs }) {
   const { id } = useParams();
@@ -19,7 +21,32 @@ function JobDetail({ jobs }) {
   useEffect(() => {
     setTimeout(() => setLoading(false), 3000);
   }, []);
-
+  //>>.. form submission function from here ..<<
+  const [result, setResult] = React.useState("");
+  
+    const onSubmit = async (event) => {
+      event.preventDefault();
+      setResult("Sending....");
+      const formData = new FormData(event.target);
+  
+      formData.append("access_key", "dce9bf63-35aa-4dfe-9e54-0a01c43123df");
+  
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData
+      });
+  
+      const data = await response.json();
+  
+      if (data.success) {
+        setResult("Form Submitted Successfully");
+        alert("Form Submitted Successfully")
+        event.target.reset();
+      } else {
+        console.log("Error", data);
+        setResult(data.message);
+      }
+    };
   return (
     <>
       <Navbar />
@@ -53,7 +80,7 @@ function JobDetail({ jobs }) {
             <strong>Salary Type:</strong> {job.salaryType}
           </p>
         </div>
-        <form className="jobform">
+        <form className="jobform" onSubmit={onSubmit}>
           <div>
             <input type="text" placeholder="firstname" />
             <input type="text" placeholder="lastname" />
@@ -79,7 +106,7 @@ function JobDetail({ jobs }) {
           <button
             type="submit"
             className="jobformbtn"
-            onClick={() => notify("Application Successful")}
+            onClick={() => notify("Application submitted Successfully")}
           >
             Submit
           </button>

@@ -36,9 +36,9 @@ function login() {
       );
       navigate("/Homepage");
       alert("login sucessful");
-      console.log(response.data);
+      alert(response.data);
     } catch (error) {
-      console.error(error, error.response?.data || error.message);
+      alert(error, error.response?.data || error.message);
     }
   };
   return (
