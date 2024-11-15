@@ -14,6 +14,8 @@ main {
   font-family: "Martel", sans-serif;
   font-size: 40px;
   font-weight: 700;
+  text-decoration: none;
+  color: #000000;
   background-color: #f8f8f8;
   line-height: 75px;
   text-align: center;
@@ -182,20 +184,25 @@ article {
   border-radius: 50%;
   box-shadow: 10px 2px 10px #f8f8f8;
 }
-.shift{
+.shift {
   display: flex;
   justify-content: space-around;
   flex-direction: row;
   align-items: center;
 }
-.clientsflex{
+.clientsflex::-webkit-scrollbar{
+  display:none;
+}
+.clientsflex {
   display: flex;
   justify-content: space-around;
+  overflow: hidden;
+  overflow-x: scroll;
 }
 .card1 {
   display: flex;
   flex-direction: column;
-  width: 25rem;
+  width: 20rem;
   gap: 2rem;
   background-color: #fff;
   border: 1px solid solid gainsboro;
@@ -268,7 +275,7 @@ article {
 .secondcard {
   /* padding: 1rem 2rem; */
   height: 50vh;
-
+color: #000000;
   background-color: #f8f8f8;
   display: flex;
   justify-content: space-around;

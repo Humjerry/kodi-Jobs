@@ -1,84 +1,67 @@
-import React from "react";
-import Rect1 from "../../images/Rectangle 139.png";
-import Rect2 from "../../images/Rectangle 140.png";
-import Rect3 from "../../images/Rectangle 141.png";
-import Arow from "../../images/Arrow 1.png";
-import Navbar from "../components/nav.jsx"
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import axios from "axios";
+import "../components/Spinner.css";
+import "../../app.css";
 
-function Card3() {
+const apiBaseUrl = "https://blogbackend-ng9i.onrender.com/api/blog"; 
+
+const BlogList = () => {
+  const [blogs, setBlogs] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchBlogs = async () => {
+      try {
+        const response = await axios.get(`${apiBaseUrl}/blogs`);
+        setBlogs(response.data);
+        setIsLoading(false);
+      } catch (error) {
+        console.error("Error fetching blogs:", error);
+      }
+    };
+
+    fetchBlogs();
+  }, []);
+
+  if (isLoading) {
+    return (
+      <div className="spinner-container">
+        <div className="spinner"></div>
+      </div>
+    );
+  }
+
   return (
-    <>
-     <Navbar />
-      <h1 className="card2h2">See Our Blogs Here</h1>
-      <section className="thirdcarddiv">
-        <div className="blogcard1">
-          <figure>
-            <img className="card3img1" src={Rect1} alt="" />
-          </figure>
-          <div className="blogtext">
-            <h1
-              className="blogtitle
-              "
-            >
-              Appealing Console Output with Colors.js
-            </h1>
-            <p className="blogsum">
-              {" "}
-              Using the colors.js package gives an appealing visual and a better
-              console output, giving room for easy debugging process.
-            </p>
-
-            <button className="blogbtn">
-              {" "}
-              READ MORE <img src={Arow} alt="" />
-            </button>
-          </div>
+    <div className="bloghol">
+      {blogs.length === 0 ? (
+        <div className="spinner-container">
+          <div className="spinner"></div>
         </div>
-
-        <div className="blogcard2">
-          <figure>
-            <img className="card3img2" src={Rect2} alt="" />
-          </figure>
-          <div className="blogtext2">
-            <h1
-              className=" blogtitle2
-              "
-            >
-              Appealing Console Output with Colors.js
-            </h1>
-            <p className="blogsum2">
-              {" "}
-              Using the colors.js package gives an appealing visual and a better
-              console output, giving room for easy debugging process.
-            </p>
-
-            <button className="blogbtn2">
-              {" "}
-              READ MORE <img src={Arow} alt="" />
-            </button>
+      ) : (
+        blogs.map((blog) => (
+          <div key={blog._id} className="blog-item">
+            {blog.imageUrl && (
+              <img
+                src={`https://blogbackend-ng9i.onrender.com/${blog.imageUrl}`}
+                alt={blog.title}
+                width="200"
+              />
+            )}
+            <div>
+              <h3>{blog.title}</h3>
+              <p>{blog.shortdesc}</p>
+              <Link to={`/blog/${blog._id}`}>
+                <p style={{ color: "blue", fontSize: "0.8rem" }}>
+                  View Full Blog
+                </p>
+              </Link>
+            </div>
           </div>
-        </div>
-        <div className="blogcard3">
-          <figure>
-            <img className="card3img3" src={Rect3} alt="" />
-          </figure>
-          <div className="blogtext3">
-            <h1 className="blogtitle3">
-              Appealing Console Output with Colors.js
-            </h1>
-            <p className="blogsum3">
-              Using the colors.js package gives an appealing visual and a better
-              console output, giving room for easy debugging process.
-            </p>
-
-            <button className="blogbtn3">
-              READ MORE <img src={Arow} alt="" />
-            </button>
-          </div>
-        </div>
-      </section>
-    </>
+        ))
+      )}
+    </div>
   );
-}
+};
 
-export default Card3;
+export default BlogList;

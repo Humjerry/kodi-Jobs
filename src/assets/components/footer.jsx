@@ -45,7 +45,7 @@ function Footer() {
             <p>© Copyright 2024, All Rights Reserved by KodiJobs</p>
             <div className="socialmedia">
                 <img src={Instagramimg} alt="" />
-                <img src={Githubimg} alt="" />
+            <img src={Githubimg} alt="" />
                 <img src={Facebookimg} alt="" />
                 <img src={Twitterimg} alt="" />
             </div>

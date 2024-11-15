@@ -16,6 +16,7 @@ import "./app.css";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import jobData from "../job.json";
+import BlogDetail from "./assets/pages/BlogDetail.jsx";
 
 export function App() {
   return (
@@ -26,6 +27,7 @@ export function App() {
   
         <Routes>
           <Route path="/" element={<Signup />} errorElement={<Signup />} />
+          <Route path="/blog/:blogId" element={<BlogDetail />} errorElement={<BlogDetail />} />
           <Route
             path="/login"
             element={<Loginpage />}
