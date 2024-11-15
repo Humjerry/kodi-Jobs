@@ -1,0 +1,812 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Martel:wght@200;300;400;600;700;800;900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rajdhani:wght@300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  max-width: 100%;
+  text-decoration: none;
+}
+main {
+  background-color: #f8f8f8;
+}
+.card2h1 {
+  font-family: "Martel", sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  background-color: #f8f8f8;
+  line-height: 75px;
+  text-align: center;
+  margin-top: 4rem;
+}
+.card2h2 {
+  font-family: "Martel", sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 4rem;
+}
+.thirdcarddiv {
+  display: flex;
+  gap: 1rem;
+  align-content: center;
+  justify-content: center;
+  padding: 1rem 2rem;
+}
+.blogcard1,
+.blogcard2,
+.blogcard3 {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 320px;
+  border-radius: 20px;
+}
+.blogtext,
+.blogtext2,
+.blogtext3 {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  /* width: 420px; */
+}
+.clienth1 {
+  font-family: "Martel", sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 75px;
+  text-align: center;
+  margin-top: 4rem;
+}
+.about {
+  padding: 5rem;
+}
+.firstabout,
+.secondabout {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+  text-align: center;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+.footerdiv {
+  width: 100%;
+  background-color: black;
+  color: #f8f8f8;
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  text-align: left;
+  padding: 1rem;
+}
+.form1,
+.form2 {
+  display: flex;
+  margin: 2rem 0;
+  gap: 2rem;
+}
+.contactform {
+  margin: 0 auto;
+  width: 50%;
+  padding: 1rem;
+  background: white;
+  border-radius: 10px;
+}
+.firstname,
+.lastname,
+.email,
+.location {
+  width: 23rem;
+  height: 40px;
+  border-radius: 9px;
+  outline: none;
+  border: none;
+  background: #f8f8f8;
+  font-family: "inter", sans-serif;
+  font-size: 14px;
+  padding: 1rem;
+  font-weight: 400;
+}
+
+.textarea {
+  border-radius: 9px;
+  outline: none;
+  border: none;
+  background: #f8f8f8;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  width: 100%;
+  height: 86px;
+  padding: 1rem;
+}
+.sp {
+  font-family: "Inter", sans-serif;
+  font-size: 8px;
+  font-weight: 400;
+}
+.socialmedia {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.footerkite {
+  width: 75px;
+  height: 75px;
+}
+.footerright {
+  display: flex;
+  justify-content: space-around;
+  border-top: lpx solid solid #f8f8f8;
+  padding: 0.5rem;
+}
+article {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0.5rem;
+  margin-bottom: 2rem;
+}
+.divul {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.say {
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: left;
+}
+.clientimg {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  box-shadow: 10px 2px 10px #f8f8f8;
+  margin-left: 4rem;
+}
+
+.card1 {
+  width: 20rem;
+  display: flex;
+  border: lpx solid solid gainsboro;
+  flex-flow: column nowrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem 2rem;
+  cursor: pointer;
+  border-radius: 1rem;
+  margin-top: 2rem;
+}
+
+.card1:hover {
+  transform: translateY(-0.5rem);
+  border-bottom: 7px solid #92e3a9;
+}
+
+.clientname {
+  font-family: "Martel", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  text-align: left;
+}
+.role {
+  font-family: Open sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  text-align: left;
+}
+.blogbtn,
+.blogbtn2,
+.blogbtn3 {
+  cursor: pointer;
+  width: 167px;
+  height: 24px;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  text-align: left;
+}
+.card3img1,
+.card3img2,
+.card3img3 {
+  width: 420px;
+  height: 247px;
+  border-radius: 20px;
+}
+.blogtitle,
+.blogtitle2,
+.blogtitle3 {
+  font-family: "Inter", sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  text-align: left;
+}
+.blogsum,
+.blogsum2,
+.blogsum3 {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  text-align: left;
+}
+.secondcard {
+  padding: 1rem 2rem;
+  background-color: #f8f8f8;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.secondcard div:hover {
+  background-color: black;
+  color: white;
+  transition: 1ms;
+}
+.secondcard div {
+  width: 190px;
+  height: 130px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+  gap: 1rem;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: white;
+}
+.secondcard div figure {
+  width: 55px;
+  height: 55px;
+  padding: 1rem;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: #f8f8f8;
+}
+
+.secondcard div p {
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.cardHol {
+  display: flex;
+  width: 90%;
+  padding: 5rem 0;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  gap: 3rem;
+  justify-content: space-between;
+}
+.cardContainer {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1rem;
+  border: lpx solid solid gainsboro;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  width: 350px;
+  padding: 2rem 1rem;
+}
+.cardContainer img {
+  width: 4.5rem;
+  height: 4rem;
+  border-radius: 0.5rem;
+}
+
+.cardContainer .texts {
+  display: flex;
+  justify-content: space-between;
+}
+.cardContainer .texts div {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+}
+.cardContainer .texts div h3 {
+  font-size: 1.2rem;
+  color: #000000;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+}
+.cardContainer .texts div p {
+  font-size: 0.8rem;
+  font-weight: 300;
+  color: rgb(115, 114, 114);
+}
+
+.cardContainer .text2 {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 0.7rem;
+}
+
+.cardContainer hr {
+  border-top: 0.5px solid gainsboro;
+}
+
+.cardContainer .text2 h1 {
+  font-size: 1.3rem;
+  color: #000000;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+}
+
+.cardContainer .text2 p {
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: rgb(115, 114, 114);
+  line-height: 1.5;
+  font-family: "Poppins", sans-serif;
+}
+
+.btncard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btncard button {
+  font-size: 1rem;
+  background-color: #000000;
+  color: #fff;
+  padding: 0.4rem 1rem;
+  border-radius: 0.3rem;
+  border: none;
+}
+
+.btncard p {
+  display: flex;
+  gap: 0.4rem;
+  align-items: center;
+  color: rgb(161, 159, 159);
+}
+
+.typejob {
+  background-color: aquamarine;
+  padding: 0.3rem 0.3rem;
+  border-radius: 0.5rem;
+}
+
+.jobcards {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+  /* display: none; */
+  gap: 2rem;
+  background-color: #f8f8f8;
+}
+.first,
+.second {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.postbtn {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 300;
+  font-family: "Inter", sans-serif;
+  gap: 10px;
+}
+.postbtn button:hover {
+  background-color: #92e3a9;
+  color: black;
+  transition: 1ms;
+}
+.postbtn button {
+  background: transparent;
+  color: white;
+  background-color: #000000;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 2rem;
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+  cursor: pointer;
+  text-align: center;
+}
+.postbtn .icon {
+  width: 24px;
+}
+
+.role {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  gap: 2rem;
+}
+
+.nav h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  text-align: left;
+}
+.heroOffice {
+  width: 665px;
+  height: 408px;
+}
+
+.hero {
+  margin-top: 4rem;
+  background-color: #f8f8f8;
+}
+.h1 {
+  font-family: "Martel", sans-serif;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 700;
+  margin-left: 1rem;
+}
+.h1div {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.ftbtn button:hover {
+  background-color: #92e3a9;
+  color: black;
+  border: lpx solid solid #f8f8f8;
+  transition: 0.5ms;
+  height: 40px;
+  border-radius: 40px;
+}
+.ftbtn button {
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: white;
+  text-align: center;
+  padding: 0.5rem;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+}
+.formbtn:hover {
+  background: #92e3a9;
+  color: black;
+  transition: 1ms;
+  font-weight: 400;
+}
+.formh2 {
+  margin: 1rem;
+  font-family: "Martel", sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 75px;
+  text-align: center;
+}
+.companilogos {
+  background: rgba(217, 217, 217, 1);
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+.Moniepoint {
+  height: 70px;
+  border-radius: 20px;
+}
+.Itskills {
+  border-radius: 10px;
+  width: 10rem;
+  height: 3rem;
+}
+.formbtn {
+  width: 150px;
+  height: 40px;
+  padding: 10px;
+  float: right;
+  margin: 1rem;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-family: "inter", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  gap: 10px;
+  border-radius: 50px;
+  background-color: black;
+  color: white;
+}
+.hero2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.heroImg1,
+.heroImg2 {
+  width: 229px;
+  height: 264.91px;
+}
+.inputDiv {
+  background-color: white;
+  width: 578px;
+  height: 42px;
+  border-radius: 50px;
+  padding-left: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0 auto;
+  margin-top: 5rem;
+  box-shadow: 5px 2px 5px rgba(0, 0, 0, 0.3);
+}
+.ftbtn {
+  display: flex;
+  background-color: black;
+  height: 30px;
+  border-radius: 40px;
+  align-items: center;
+}
+.ftbtn img {
+  width: 24px;
+  height: 24px;
+}
+.inputDiv input {
+  flex: 1;
+  height: 100%;
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+.inputDiv button:hover {
+  color: black;
+  background: #92e3a9;
+  height: 50px;
+  border-radius: 40px;
+}
+.inputDiv button {
+  cursor: pointer;
+  height: 100%;
+  width: 25%;
+  color: white;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  text-align: center;
+  background: black;
+  border-radius: 40px;
+  border: none;
+  outline: none;
+}
+.hero p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+.herotext {
+  padding: 0 3.5rem;
+  display: flex;
+  align-items: center;
+  line-height: 8rem;
+  justify-content: space-around;
+  font-family: "Martel", sans-serif;
+  font-size: 90px;
+  font-weight: 700;
+  text-align: center;
+}
+.nav h4 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 30px;
+  text-align: center;
+}
+.nav {
+  cursor: pointer;
+  top: 0;
+  width: 100%;
+  height: 69px;
+  background-color: white;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.nav ul li {
+  color: #000000;
+}
+ul {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  font-family: "Montserrat", sans-serif;
+}
+body {
+  background-color: rgba(248, 248, 248, 1);
+}
+.jobpage2 {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 5rem;
+  max-width: 90%;
+  margin: 0 auto;
+  margin-top: 1rem;
+  margin-bottom: 5rem;
+}
+
+.applyinpage {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1rem;
+  /* border: 1px solid; */
+}
+
+.applyinpage span {
+  display: flex;
+  gap: 0.7rem;
+  align-items: center;
+}
+
+.applyinpage span img {
+  width: 4.5rem;
+  height: 4rem;
+  border-radius: 0.5rem;
+}
+
+.applyinpage span h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+}
+
+.applyinpage p {
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+}
+
+.jobform {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1rem;
+  flex: 0.5;
+}
+
+.jobform div {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.jobform input {
+  height: 53px;
+  border-radius: 5px;
+  border: 1px solid gainsboro;
+  padding: 0.5rem;
+  outline: none;
+}
+
+.jobform input:focus {
+  border: 1px solid #007bff;
+}
+
+.jobformbtn {
+  padding: 0.5rem 0;
+  border: none;
+  background-color: #000000;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.uploads {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 0.1rem;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  border: 1px solid gainsboro;
+  height: 55px;
+  padding: 2.5rem 0;
+}
+
+.uploads input {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.uploads input::placeholder {
+  font-family: "Poppins", sans-serif;
+}
+
+.uploads h3 {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  color: gray;
+}
+
+.uploads .icon {
+  color: gray;
+  font-size: 1.5rem;
+}
+
+.signupform {
+  margin: 5rem auto;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  padding-top: 3rem;
+  text-align: center;
+  gap: 0.5rem;
+}
+
+.signupform input {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid gainsboro;
+  width: 300px;
+  margin: 0 auto;
+}
+
+.signupform button {
+  width: 300px;
+  margin: 0 auto;
+  padding: 0.4rem 0;
+  border: none;
+  background-color: #000000;
+  color: #fff;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+}
+
+.signupform h2 {
+  font-family: "Poppins", sans-serif;
+}
+
+.signupform p {
+  color: #000000;
+}
+
+.formup {
+  margin: 6rem auto !important;
+}
